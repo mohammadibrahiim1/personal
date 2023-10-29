@@ -21,7 +21,7 @@ const About = () => {
               Node.js.
             </h3>
 
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn">Check Out My Resume</button>
           </div>
         </div>
       </div>
