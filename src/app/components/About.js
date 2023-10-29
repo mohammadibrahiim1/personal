@@ -1,14 +1,17 @@
+import Image from "next/image";
 import React from "react";
 
 const About = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen" id="about">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <img
-            src="/images/stock/photo-1635805737707-575885ab0820.jpg"
+          <Image
+            src="https://i.ibb.co/8Pst2r2/profile-img.jpg"
+            width={500}
+            height={500}
             className="max-w-sm rounded-lg shadow-2xl"
-            alt="profile" 
+            alt="Picture of the author"
           />
           <div>
             <h1 className="text-5xl font-bold">Box Office News!</h1>
