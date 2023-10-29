@@ -14,12 +14,13 @@ const About = () => {
             alt="Picture of the author"
           />
           <div>
-            <h1 className="text-5xl font-bold">Box Office News!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+            <h5>Hello,My name is</h5>
+            <h1 className="text-5xl font-bold"> Mohammad Ebrahim</h1>
+            <h3 className="text-lg font-bold pb-4">
+              MERN maestro weaving web wonders with MongoDB, Express, React, and
+              Node.js.
+            </h3>
+
             <button className="btn btn-primary">Get Started</button>
           </div>
         </div>
