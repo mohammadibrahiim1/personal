@@ -18,6 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: "Khula", sans-serif;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -25,3 +26,106 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* header container css */
+
+.header-container {
+  padding-top: 155px;
+  padding-bottom: 155px;
+}
+.header-container h2 {
+  width: 840px;
+  margin: 0 auto;
+  color: var(--Primary, #000);
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.header-container h5 {
+  width: 769px;
+  margin: 0 auto;
+  color: var(--Pars-Color, #7c7c7c);
+  text-align: center;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding-top: 20px;
+}
+
+.header-container button {
+  display: flex;
+  width: 196px;
+  padding: 20px 22px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--White-Color, #fff);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  text-transform: capitalize;
+  margin: 0 auto;
+  border: 1px solid var(--Primary, #000);
+  background: var(--Primary, #000);
+  margin-top: 19px;
+}
+
+/* responsive for mobile devices */
+
+@media only screen and (max-width: 576px) {
+  .header-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .header-container h2 {
+    width: 358px;
+    margin: 0 auto;
+    color: var(--Primary, #000);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: capitalize;
+  }
+  .header-container h5 {
+    width: 347px;
+    margin: 0 auto;
+    color: var(--Pars-Color, #7c7c7c);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38px; /* 237.5% */
+    text-transform: capitalize;
+  }
+
+  .header-container button {
+    display: flex;
+    width: 350px;
+    padding: 20px 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--Primary, #000);
+    background: var(--Primary, #000);
+    color: var(--White-Color, #fff);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px; /* 118.75% */
+    text-transform: capitalize;
+  }
+}
+
+/* header container css */
