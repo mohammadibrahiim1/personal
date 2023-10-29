@@ -1,6 +1,4 @@
-// import Image from "next/image";
-
-import HomePage from "./Home/page";
+import About from "./components/About";
 import Header from "./components/Header";
 
 export default function Home() {
@@ -8,7 +6,7 @@ export default function Home() {
     <main>
       <div>
         <Header></Header>
-        {/* <HomePage></HomePage> */}
+        <About></About>
       </div>
     </main>
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
