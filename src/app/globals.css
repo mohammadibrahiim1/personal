@@ -282,7 +282,6 @@ body {
   background-color: #fff;
   color: #697e91;
   width: 323px;
-  
 }
 
 .plan strong {
@@ -396,6 +395,8 @@ body {
 
 /* all Projects  section end */
 
+
+
 /* loader css start */
 
 .loader {
@@ -483,3 +484,35 @@ body {
 }
 
 /* loader css end */
+
+/* contact section start */
+
+.contact_section {
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+.contact_section h1 {
+  text-align: center;
+  color: #445964;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+.contact_section h3 {
+  padding-top: 15px;
+  text-align: center;
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--Par-Color, #7c7c7c);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28.5px;
+  text-transform: capitalize;
+}
+/* contact section start */
