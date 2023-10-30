@@ -1,6 +1,7 @@
 import React from "react";
 import { useGetProjectsQuery } from "../redux/features/api/apiSlice";
 import Image from "next/image";
+import Link from "next/link";
 
 const Projects = () => {
   const { data: projects, isLoading, error } = useGetProjectsQuery();
@@ -25,35 +26,28 @@ const Projects = () => {
         <div class="container portfolio_card_container mx-auto">
           {allProjects?.map((item) => (
             <>
-              <div class="card">
-                <div class="content">
-                  <div class="imgBx">
-                    <Image
-                      width={500}
-                      height={500}
-                      alt="Picture of the author"
-                      src={item.image}
-                    />
-                  </div>
-                  <div class="contentBx">
-                    <h3>
-                      Lion
-                      <br />
-                      <span>Happy Birthday</span>
-                    </h3>
+              <div className="card w-80 bg-base-100 shadow-xl">
+                <figure>
+                  <Image
+                    src={item.image}
+                    width={500}
+                    height={500}
+                    alt={item.name}
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">{item.name}</h2>
+                  <p>Category: {item.category}</p>
+                  <div className="card-actions justify-end mt-3">
+                    <Link
+                      href={`${item.externalLink}`}
+                      target="_blank"
+                      className="btn btn-primary"
+                    >
+                      Live site link
+                    </Link>
                   </div>
                 </div>
-                <ul class="sci">
-                  <li>
-                    <a href="">happy</a>
-                  </li>
-                  <li>
-                    <a href="">birth</a>
-                  </li>
-                  <li>
-                    <a href="">day</a>
-                  </li>
-                </ul>
               </div>
             </>
           ))}
