@@ -4,8 +4,6 @@ import Footer from "./shared/Footer/Footer";
 import Navbar from "./shared/Navbar/Navbar";
 import React from "react";
 import { Providers } from "./providers";
-// import { Provider } from "react-redux";
-// import store from "./redux/store/store";
 
 const inter = Inter({ subsets: ["latin"] });
 
