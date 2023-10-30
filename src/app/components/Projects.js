@@ -63,7 +63,6 @@ const Projects = () => {
                   <span class="pricing">
                     <span>
                       <small>{item.category}</small>
-                      {/* $49 <small>/ m</small> */}
                     </span>
                   </span>
                   <p class="title">{item.name}</p>
@@ -94,7 +93,11 @@ const Projects = () => {
                     </>
                   ))}
                   <div class="action">
-                    <a class="button" href={`${item.externalLink}`}>
+                    <a
+                      class="button"
+                      href={`${item.externalLink}`}
+                      target="_blank"
+                    >
                       Live view
                     </a>
                   </div>
