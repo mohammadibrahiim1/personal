@@ -1,5 +1,5 @@
-const { configureStore } = require("@reduxjs/toolkit");
-const { projectsApi } = require("../features/api/apiSlice");
+import { configureStore } from "@reduxjs/toolkit";
+import { projectsApi } from "../features/api/apiSlice";
 
 const store = configureStore({
   reducer: {
