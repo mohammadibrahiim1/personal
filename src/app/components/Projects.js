@@ -86,6 +86,7 @@ const Projects = () => {
                             </svg>
                           </span>
                           <span>
+                            {/* {tool} */}
                             <strong>20</strong> team members
                           </span>
                         </li>
