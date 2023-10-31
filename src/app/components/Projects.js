@@ -9,7 +9,7 @@ const Projects = () => {
   const allProjects = projects?.totalItems;
   console.log(allProjects);
   if (isLoading) {
-    return <div className="loader"></div>;
+    return <span className="loading loading-ring loading-lg py-12"></span>;
   }
 
   if (error) {
