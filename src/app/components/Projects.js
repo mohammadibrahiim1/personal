@@ -9,7 +9,7 @@ const Projects = () => {
   const allProjects = projects?.totalItems;
   console.log(allProjects);
   if (isLoading) {
-    return <div class="loader"></div>;
+    return <div className="loader"></div>;
   }
 
   if (error) {
@@ -21,10 +21,38 @@ const Projects = () => {
       <div className="portfolio_section">
         <h1>My Portfolio</h1>
 
-        <div class="portfolio_card_container">
+        <div className="portfolio_card_container">
           {allProjects?.map((item) => (
             <>
-              <div className="card w-80 bg-base-100 shadow-xl">
+              <div class="group relative block h-96 bg-black cursor-pointer">
+                <img
+                  alt="Developer"
+                  src={item.image}
+                  class="absolute inset-0 h-full w-full object-cover opacity-25 transition-opacity group-hover:opacity-50"
+                />
+
+                <div class="relative p-4 sm:p-6 lg:p-8">
+                  <p class="text-sm font-medium uppercase tracking-widest text-pink-500">
+                    {item.category}
+                  </p>
+
+                  <p class="text-xl font-bold text-white sm:text-2xl">
+                    {item.name}
+                  </p>
+
+                  <div class="mt-32 sm:mt-48 lg:mt-64">
+                    <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+                      <a
+                        href={`${item.externalLink}`}
+                        class="text-sm text-white"
+                      >
+                        Website
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="card w-80 bg-base-100 shadow-xl">
                 <figure>
                   <Image
                     src={item.image}
@@ -46,7 +74,7 @@ const Projects = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </>
           ))}
         </div>
@@ -55,55 +83,86 @@ const Projects = () => {
       <div className="allProjects_section">
         <h1>Other Projects</h1>
 
-        <div class="allProjects_card_container">
+        <div className="allProjects_card_container">
           {allProjects?.map((item) => (
             <>
-              <div class="plan">
-                <div class="inner">
-                  <span class="pricing">
-                    <span>
-                      <small>{item.category}</small>
-                    </span>
-                  </span>
-                  <p class="title">{item.name}</p>
-                  <p class="info">{item.about.slice(0, 60)}</p>
-                  {item?.tools?.map((tool) => (
-                    <>
-                      <ul class="features">
-                        <li>
-                          <span class="icon">
-                            <svg
-                              height="24"
-                              width="24"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path d="M0 0h24v24H0z" fill="none"></path>
-                              <path
-                                fill="currentColor"
-                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
-                              ></path>
-                            </svg>
-                          </span>
-                          <span>
-                            {/* {tool} */}
-                            <strong>20</strong> team members
-                          </span>
+              <article className="rounded-none border border-gray-700 bg-gray-800 p-4">
+                <div className="flex items-center gap-4">
+                  <img
+                    alt="Developer"
+                    src={item.image}
+                    className="h-16 w-16 rounded-full object-cover"
+                  />
+
+                  <div>
+                    <h3 className="text-lg font-medium text-white">
+                      {item.name}
+                    </h3>
+
+                    <div className="flow-root">
+                      <ul className="-m-1 flex flex-wrap">
+                        <li className="p-1 leading-none">
+                          <a
+                            href="https://www.linkedin.com/in/mohammad-ibrahim-080a51257/"
+                            className="text-xs font-medium text-gray-300"
+                          >
+                            Linkedin
+                          </a>
+                        </li>
+
+                        <li className="p-1 leading-none">
+                          <a
+                            href={`${item.githubLink}`}
+                            className="text-xs font-medium text-gray-300"
+                          >
+                            GitHub
+                          </a>
+                        </li>
+
+                        <li className="p-1 leading-none">
+                          <a
+                            href={`${item.externalLink}`}
+                            className="text-xs font-medium text-gray-300"
+                          >
+                            Website
+                          </a>
                         </li>
                       </ul>
-                    </>
-                  ))}
-                  <div class="action">
-                    <a
-                      class="button"
-                      href={`${item.externalLink}`}
-                      target="_blank"
-                    >
-                      Live view
-                    </a>
+                    </div>
                   </div>
                 </div>
-              </div>
+
+                <ul className="mt-4 space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      className="block h-full rounded-lg border border-gray-700 p-4 hover:border-pink-600"
+                    >
+                      <strong className="font-medium text-white">
+                        Project Description
+                      </strong>
+
+                      <p className="mt-1 text-xs font-medium text-gray-300">
+                        {item.about.slice(0, 80)}
+                      </p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <div className="block h-full rounded-lg border border-gray-700 p-4 hover:border-pink-600">
+                      <strong className="font-medium text-white">Tools</strong>
+
+                      <p className="mt-1 text-xs font-medium text-gray-300">
+                        {item?.tools?.map((tool) => (
+                          <>
+                            <span className="me-5">{tool.t1}</span>
+                          </>
+                        ))}
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </article>
               {/* <div className="card w-80 bg-base-100 shadow-xl">
                 <figure>
                   <Image
