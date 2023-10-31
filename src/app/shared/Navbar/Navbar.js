@@ -67,7 +67,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a>My Resume</a>
+          <p className="btn btn-outline hover:bg-[#D6DBDC] duration-700">
+            My Resume
+          </p>
         </div>
       </div>
     </div>

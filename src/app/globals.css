@@ -552,7 +552,6 @@ body {
 .contact_section button {
   text-align: center;
   display: flex;
-  width: 20%;
   margin: 0 auto;
   color: var(--Par-Color, #fff);
   font-size: 13px;
