@@ -1,9 +1,26 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [navbar, setNavbar] = useState(false);
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+  //  related to the navbar change on scroll
+  window.addEventListener("scroll", changeBackground);
   return (
-    <div>
-      <div className="navbar  fixed top-0 right-0 left-0 container mx-auto">
+    <div
+      className={
+        navbar
+          ? "bg-[#D6DBDC] z-10 navbar fixed top-0 right-0 left-0 "
+          : "navbar fixed top-0 right-0 left-0 "
+      }
+    >
+      <div className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -32,17 +49,7 @@ const Navbar = () => {
               <li>
                 <a href="#myWork">My Work</a>
               </li>
-              {/* <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li> */}
+
               <li>
                 <a href="#contact">Contact</a>
               </li>
