@@ -25,8 +25,10 @@ const Projects = () => {
           {allProjects?.map((item) => (
             <>
               <div class="group relative block h-96 bg-black cursor-pointer">
-                <img
+                <Image
                   alt="Developer"
+                  width={500}
+                  height={500}
                   src={item.image}
                   class="absolute inset-0 h-full w-full object-cover opacity-25 transition-opacity group-hover:opacity-50"
                 />
@@ -88,8 +90,10 @@ const Projects = () => {
             <>
               <article className="rounded-none border border-gray-700 bg-gray-800 p-4">
                 <div className="flex items-center gap-4">
-                  <img
+                  <Image
                     alt="Developer"
+                    width={500}
+                    height={500}
                     src={item.image}
                     className="h-16 w-16 rounded-full object-cover"
                   />
