@@ -10,12 +10,11 @@ const Navbar = () => {
       setNavbar(false);
     }
   };
-  // if (typeof window !== "undefined") {
-  //  related to the navbar change on scroll
-  useEffect(() => {
+  if (typeof window !== "undefined") {
+    //  related to the navbar change on scroll
+
     window.addEventListener("scroll", changeBackground);
-  }, []);
-  // }
+  }
   return (
     <div
       className={
