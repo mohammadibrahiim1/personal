@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -10,8 +10,12 @@ const Navbar = () => {
       setNavbar(false);
     }
   };
+  // if (typeof window !== "undefined") {
   //  related to the navbar change on scroll
-  window.addEventListener("scroll", changeBackground);
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackground);
+  }, []);
+  // }
   return (
     <div
       className={
