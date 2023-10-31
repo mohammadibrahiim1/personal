@@ -543,10 +543,25 @@ body {
   justify-content: center;
   flex-shrink: 0;
   color: var(--Par-Color, #7c7c7c);
-  font-size: 17px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 500;
   line-height: 28.5px;
   text-transform: capitalize;
 }
-/* contact section start */
+.contact_section button {
+  text-align: center;
+  display: flex;
+  width: 20%;
+  margin: 0 auto;
+  color: var(--Par-Color, #fff);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28.5px;
+  text-transform: capitalize;
+  background-color: #445964;
+}
+.contact_section button:hover {
+  background-color: #445964;
+}
